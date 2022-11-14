@@ -23,5 +23,5 @@ public class Student {
     private String firstName;
 
     @OneToOne
-    private Group groupHei;
+    private Group_2 groupHei;
 }

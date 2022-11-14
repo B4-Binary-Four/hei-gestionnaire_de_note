@@ -9,13 +9,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name = "Group_hei")
+@Entity
+@Table(name = "\"group_2\"")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Group {
+public class Group_2 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
