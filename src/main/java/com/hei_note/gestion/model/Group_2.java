@@ -23,4 +23,6 @@ public class Group_2 {
     private Long id;
 
     private String nameGroup;
+
+    private String year;
 }
