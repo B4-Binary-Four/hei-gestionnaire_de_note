@@ -31,4 +31,19 @@ public class GroupService {
 
         return newGroup;
     }
+
+    //PUT mapping
+        //1.modify group by name or year
+    public Group_2 putModification(Group_2 groupToModify){
+        Group_2 thisGroup = groupRespository.findById(groupToModify.getId())
+                .orElseThrow(() -> new NullPointerException("not found"));
+        if(groupToModify.getNameGroup() != null){
+            thisGroup.setNameGroup(groupToModify.getNameGroup());
+        }
+        if(groupToModify.getYear() != null){
+            thisGroup.setYear(groupToModify.getYear());
+        }
+        groupRespository.save(thisGroup);
+        return thisGroup;
+    }
 }
